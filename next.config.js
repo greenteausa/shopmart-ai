@@ -1,20 +1,34 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Enable static export for GitHub Pages
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true, // Required for static export
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.placeholder.com',
+        port: '',
+        pathname: '/**',
+      }
+    ],
+  },
+  // GitHub Pages configuration
+  ...(process.env.NODE_ENV === 'production' && {
+    basePath: '/shopmart-ai',
+    assetPrefix: '/shopmart-ai/',
+  }),
+  // Disable server-side features for static export
+  swcMinify: true,
   experimental: {
     appDir: true,
-  },
-  images: {
-    domains: [
-      'example.com', 
-      'amazon.com', 
-      'ebay.com', 
-      'bestbuy.com', 
-      'walmart.com', 
-      'target.com',
-      'images.unsplash.com',
-      'via.placeholder.com',
-      'picsum.photos'
-    ],
   },
   async rewrites() {
     return [

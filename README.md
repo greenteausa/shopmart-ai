@@ -7,10 +7,11 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-06B6D4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/greenteausa/shopmart-ai)
 
 **A modern, AI-powered shopping assistant that helps you discover products across thousands of stores with intelligent search, price comparison, and personalized recommendations.**
 
-[🚀 Live Demo](#) • [📖 Documentation](#) • [🐛 Report Bug](#) • [💡 Request Feature](#)
+[🚀 Live Demo](https://greenteausa.github.io/shopmart-ai) • [📖 Documentation](https://github.com/greenteausa/shopmart-ai#readme) • [🐛 Report Bug](https://github.com/greenteausa/shopmart-ai/issues) • [💡 Request Feature](https://github.com/greenteausa/shopmart-ai/issues)
 
 </div>
 
@@ -42,6 +43,15 @@
 - **Smooth Animations**: 60fps micro-interactions and transitions
 - **Dark/Light Themes**: Adaptive theming support
 - **Accessibility**: WCAG 2.1 AA compliant
+
+---
+
+## 🚀 **Live Demo & Repository**
+
+- **🔗 GitHub Repository**: [https://github.com/greenteausa/shopmart-ai](https://github.com/greenteausa/shopmart-ai)
+- **🌐 Live Demo**: [https://greenteausa.github.io/shopmart-ai](https://greenteausa.github.io/shopmart-ai)
+- **📊 GitHub Pages Status**: Auto-deployed from `main` branch
+- **🔄 CI/CD**: Automated deployment on push
 
 ---
 
@@ -81,8 +91,8 @@ FastAPI + SQLAlchemy + PostgreSQL/SQLite
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/shop_mart.git
-   cd shop_mart
+   git clone https://github.com/greenteausa/shopmart-ai.git
+   cd shopmart-ai
    ```
 
 2. **Install Frontend Dependencies**
@@ -166,7 +176,7 @@ FastAPI + SQLAlchemy + PostgreSQL/SQLite
 ## 📁 Project Structure
 
 ```
-shop_mart/
+shopmart-ai/
 ├── 📱 Frontend (Next.js)
 │   ├── src/
 │   │   ├── app/
@@ -311,20 +321,20 @@ docker-compose -f docker-compose.prod.yml up -d
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+We welcome contributions! Please see our [Contributing Guide](https://github.com/greenteausa/shopmart-ai/blob/main/CONTRIBUTING.md) for details.
 
 ### **Development Setup**
-1. Fork the repository
+1. Fork the repository: [https://github.com/greenteausa/shopmart-ai/fork](https://github.com/greenteausa/shopmart-ai/fork)
 2. Create a feature branch: `git checkout -b feature/amazing-feature`
 3. Commit changes: `git commit -m 'Add amazing feature'`
 4. Push to branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+5. Open a Pull Request: [https://github.com/greenteausa/shopmart-ai/pulls](https://github.com/greenteausa/shopmart-ai/pulls)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/greenteausa/shopmart-ai/blob/main/LICENSE) file for details.
 
 ---
 
@@ -341,6 +351,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Built with ❤️ for smart shoppers everywhere**
 
-[⭐ Star this project](https://github.com/yourusername/shop_mart) if you found it helpful!
+[⭐ Star this project](https://github.com/greenteausa/shopmart-ai) if you found it helpful!
 
 </div> 
