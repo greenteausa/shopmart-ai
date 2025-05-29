@@ -115,6 +115,7 @@ export default function SearchInterface({ userId, initialQuery = '' }: SearchInt
     
     setIsSearching(true)
     try {
+      // Try to make API call first
       const response = await fetch('/api/search', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -133,11 +134,76 @@ export default function SearchInterface({ userId, initialQuery = '' }: SearchInt
           type: 'assistant',
           message: `Found ${result.products.length} products for "${query}". ${result.buying_recommendation}`
         }])
+      } else {
+        throw new Error('API not available')
       }
     } catch (error) {
-      console.error('Search failed:', error)
+      console.log('API not available, using mock data for demo purposes')
+      
+      // Fallback to mock data for static deployment
+      const mockResult = generateMockSearchResult(query.trim())
+      setSearchResult(mockResult)
+      setIsChatMode(true)
+      setChatMessages([{
+        type: 'assistant',
+        message: `Found ${mockResult.products.length} products for "${query}". This is a demo with mock data - in production, this would search real stores!`
+      }])
     } finally {
       setIsSearching(false)
+    }
+  }
+
+  const generateMockSearchResult = (searchQuery: string): SearchResult => {
+    const mockProducts: Product[] = [
+      {
+        name: `${searchQuery} Pro Max`,
+        price: Math.floor(Math.random() * 1000) + 200,
+        currency: 'USD',
+        source: 'Demo Store',
+        source_url: 'https://example.com/product1',
+        image_url: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=100&h=100&fit=crop',
+        rating: 4.5,
+        review_count: 1240,
+        key_features: ['Premium Quality', 'Fast Shipping', 'Best Seller'],
+        availability: true
+      },
+      {
+        name: `${searchQuery} Standard`,
+        price: Math.floor(Math.random() * 800) + 150,
+        currency: 'USD',
+        source: 'Demo Electronics',
+        source_url: 'https://example.com/product2',
+        image_url: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=100&h=100&fit=crop',
+        rating: 4.2,
+        review_count: 856,
+        key_features: ['Great Value', 'Reliable', 'Popular Choice'],
+        availability: true
+      },
+      {
+        name: `${searchQuery} Lite`,
+        price: Math.floor(Math.random() * 600) + 100,
+        currency: 'USD',
+        source: 'Demo Mart',
+        source_url: 'https://example.com/product3',
+        image_url: 'https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=100&h=100&fit=crop',
+        rating: 4.0,
+        review_count: 432,
+        key_features: ['Budget Friendly', 'Good Quality', 'Fast Delivery'],
+        availability: true
+      }
+    ]
+
+    return {
+      query: searchQuery,
+      products: mockProducts,
+      price_analysis: {
+        lowest_price: Math.min(...mockProducts.map(p => p.price)),
+        average_price: Math.round(mockProducts.reduce((sum, p) => sum + p.price, 0) / mockProducts.length),
+        highest_price: Math.max(...mockProducts.map(p => p.price))
+      },
+      category_insights: `Popular search for ${searchQuery}`,
+      buying_recommendation: 'Consider comparing features and prices before making your decision.',
+      search_id: Date.now()
     }
   }
 
@@ -163,10 +229,23 @@ export default function SearchInterface({ userId, initialQuery = '' }: SearchInt
       if (response.ok) {
         const result = await response.json()
         setChatMessages(prev => [...prev, { type: 'assistant', message: result.response }])
+      } else {
+        throw new Error('API not available')
       }
     } catch (error) {
-      console.error('Chat failed:', error)
-      setChatMessages(prev => [...prev, { type: 'assistant', message: 'Sorry, I had trouble processing your request.' }])
+      console.log('Chat API not available, using mock response')
+      
+      // Mock chat responses for static deployment
+      const mockResponses = [
+        "That's a great question! For the best value, I'd recommend the Standard version.",
+        "The Pro Max has premium features that might be worth the extra cost if you need top performance.",
+        "All these options have great reviews. Consider your budget and specific needs.",
+        "I'd be happy to help you compare features between these products!",
+        "This is a demo response - in production, I'd provide detailed product analysis!"
+      ]
+      
+      const randomResponse = mockResponses[Math.floor(Math.random() * mockResponses.length)]
+      setChatMessages(prev => [...prev, { type: 'assistant', message: randomResponse }])
     } finally {
       setIsChatting(false)
     }
