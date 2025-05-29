@@ -8,10 +8,11 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-06B6D4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/greenteausa/shopmart-ai)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge&logo=vercel)](https://shopmart.life)
 
 **A modern, AI-powered shopping assistant that helps you discover products across thousands of stores with intelligent search, price comparison, and personalized recommendations.**
 
-[🚀 Live Demo](https://greenteausa.github.io/shopmart-ai) • [📖 Documentation](https://github.com/greenteausa/shopmart-ai#readme) • [🐛 Report Bug](https://github.com/greenteausa/shopmart-ai/issues) • [💡 Request Feature](https://github.com/greenteausa/shopmart-ai/issues)
+[🚀 Live Demo](https://shopmart.life) • [📖 Documentation](https://github.com/greenteausa/shopmart-ai#readme) • [🐛 Report Bug](https://github.com/greenteausa/shopmart-ai/issues) • [💡 Request Feature](https://github.com/greenteausa/shopmart-ai/issues)
 
 </div>
 
@@ -48,10 +49,10 @@
 
 ## 🚀 **Live Demo & Repository**
 
+- **🌐 Live Demo**: [https://shopmart.life](https://shopmart.life)
 - **🔗 GitHub Repository**: [https://github.com/greenteausa/shopmart-ai](https://github.com/greenteausa/shopmart-ai)
-- **🌐 Live Demo**: [https://greenteausa.github.io/shopmart-ai](https://greenteausa.github.io/shopmart-ai)
-- **📊 GitHub Pages Status**: Auto-deployed from `main` branch
-- **🔄 CI/CD**: Automated deployment on push
+- **📊 Custom Domain**: Powered by GitHub Pages with professional domain
+- **🔄 CI/CD**: Automated deployment on push to main branch
 
 ---
 
@@ -350,6 +351,8 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 <div align="center">
 
 **Built with ❤️ for smart shoppers everywhere**
+
+**🌐 Visit us at [shopmart.life](https://shopmart.life)**
 
 [⭐ Star this project](https://github.com/greenteausa/shopmart-ai) if you found it helpful!
 

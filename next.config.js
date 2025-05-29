@@ -20,9 +20,9 @@ const nextConfig = {
       }
     ],
   },
-  // GitHub Pages configuration
-  basePath: process.env.NODE_ENV === 'production' ? '/shopmart-ai' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/shopmart-ai/' : '',
+  // No basePath needed for custom domain
+  // basePath: process.env.NODE_ENV === 'production' ? '/shopmart-ai' : '',
+  // assetPrefix: process.env.NODE_ENV === 'production' ? '/shopmart-ai/' : '',
   
   // Disable server-side features for static export
   swcMinify: true,
